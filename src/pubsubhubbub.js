@@ -329,8 +329,9 @@ class PubSubHubbub extends Stream {
             return this._sendError(req, res, next, 400, 'Bad Request');
         }
 
-        setTopicHub(...requestRels);
-
+        if ((!topic && !hub) && requestRels == null) return this._sendError(req, res, next, 400, 'No link header found');
+        if (!topic && !hub) setTopicHub(...requestRels);
+        
         if (!topic) {
             return this._sendError(req, res, next, 400, 'Bad Request');
         }
