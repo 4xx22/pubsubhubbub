@@ -8,7 +8,7 @@ PubSubHubbub subscriber module. Supports both 0.3 and 0.4 hubs.
 
 Install with npm
 
-    npm install pubsubhubbub
+    npm install @4xx22/pubsubhubbub
 
 ## Usage
 
